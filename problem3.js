@@ -1,20 +1,17 @@
 function checkDigitsInName(name) {
-
-    if(typeof name !== 'string'){
-        return 'Invalid Input';
-    }
     
-    const numbers = '1234567890';
+    if (typeof name !== 'string') {
+        return "Invalid Input";
+    }
 
-    for(i = 1; i < numbers.length; i++){
 
-        if(!name.includes(numbers[i])){
-            return false;
-        }
-
-        else{
+    for (let i = 0; i < name.length; i++) {
+    
+        if (name[i] >= '0' && name[i] <= '9') {
             return true;
         }
     }
 
+    
+    return false;
 }
